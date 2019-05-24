@@ -1,0 +1,17 @@
+<div class="row" style="margin-top: 10px;">
+  <div class="col-md-12">
+    <button class="btn btn-success" (click)="onNewEmployee()">New Employee</button>
+  </div>
+</div>
+
+<div class="row" style="margin-top: 10px;">
+  <div class="col-md-12">
+    <app-employee-item
+      *ngFor="let recipeEl of employees; let i = index"
+      [employee]="recipeEl"
+      [index]="i"
+    >
+    </app-employee-item>
+  </div>
+
+</div>
