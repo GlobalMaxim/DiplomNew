@@ -1,10 +1,10 @@
-<div class="row" style="margin-top: 30px; background-color: #c2cad6; border-radius: 10px;">
+<div class="row" style="margin-top: 30px; background-color: #edf1f7; border-radius: 10px; border: 1px solid darkgrey;">
   <div class="col-md-12">
     <form [formGroup]="employeeForm" (ngSubmit)="onSubmit()">
       <div class="row">
-        <div class="col-md-6">
+        <div class="col-md-12">
           <div class="form-group">
-            <label for="name">Names</label>
+            <label for="name">Add</label>
             <input
               type="text"
               id="name"
@@ -14,13 +14,15 @@
         </div>
       </div>
       <div class="row">
-        <div class="col-md-6">
+        <div class="col-md-12" style="margin: 10px 0;">
           <button
             type="submit"
-            class="btn btn-submit"
+            class="btn btn-success"
             [disabled]="!employeeForm.valid">Save</button>
-          <button type="button" class="btn btn-danger" (click)="onCancel()">Cancel</button>
-        </div>
+          <button type="button" class="btn btn-danger ml-1" (click)="onCancel()">Cancel</button>
+<!--          <button type="button" class="btn btn-warning ml-1">Редагувати</button>-->
+<!--          <button type="button" class="btn btn-info ml-1">Графік</button>-->
+      </div>
       </div>
     </form>
   </div>

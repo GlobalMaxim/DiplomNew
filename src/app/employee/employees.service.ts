@@ -9,16 +9,16 @@ import {Employee} from './employee.model';
 })
 export class EmployeesService {
    employeesChanged = new Subject<Employee[]>();
-   startedEditing = new Subject<number>();
+   // startedEditing = new Subject<number>();
   private employees: Employee[] = [
     new Employee(
-      'Maxim',
+      'First member',
     ),
     new Employee(
-      'Arnold'
+      'Second member'
     ),
     new Employee(
-      'Marina'
+      'Third member'
     )
   ];
 

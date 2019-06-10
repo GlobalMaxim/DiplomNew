@@ -18,6 +18,7 @@ export class EmployeeItemComponent implements OnInit {
 
   ngOnInit() {
   }
+  // changed
   onEditEmployee() {
     this.router.navigate(['edit'], {relativeTo: this.route});
     //this.employeeService.startedEditing.next(index);

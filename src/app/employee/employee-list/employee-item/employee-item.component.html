@@ -1,4 +1,4 @@
-<div style="margin: 10px 0; background-color: grey; border-radius: 10px;">
+<div style="margin: 10px auto;  border-radius: 10px;">
   <a
     style="cursor: pointer; text-decoration: none;"
     [routerLink]="[index]"
@@ -8,7 +8,10 @@
     {{employee.name}}
   </span>
   </a>
-
-  <button type="button" class="btn btn-primary" (click)="onEditEmployee()">Edit</button>
+<div class="div">
+<!--  Изменено-->
+  <button type="button" class="btn btn-primary"  (click)="onEditEmployee()">Edit</button>
   <button type="button" class="btn btn-danger" (click)="onDeleteEmployee()">Delete</button>
+
 </div>
+  </div>

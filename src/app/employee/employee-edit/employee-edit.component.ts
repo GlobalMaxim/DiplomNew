@@ -3,6 +3,7 @@ import { ActivatedRoute, Params, Router } from '@angular/router';
 import { FormGroup, FormArray, FormControl, Validators } from '@angular/forms';
 
 import { EmployeesService } from '../employees.service';
+import {Employee} from '../employee.model';
 
 @Component({
   selector: 'app-employee-edit',
@@ -10,6 +11,7 @@ import { EmployeesService } from '../employees.service';
   styleUrls: ['./employee-edit.component.scss']
 })
 export class EmployeeEditComponent implements OnInit {
+  employee: Employee;
   id: number;
   editMode = false;
   employeeForm: FormGroup;
@@ -20,8 +22,9 @@ export class EmployeeEditComponent implements OnInit {
   ngOnInit() {
     this.route.params.subscribe(
       (params: Params) => {
-        this.id = +params[+'id'];
-        this.editMode = params[+'id'] != null;
+        this.id = +params['id'];
+        this.editMode = params['id'] != null;
+       // this.employee = this.employeeService.getEmployee(this.id);
         this.initForm();
       }
     );
